@@ -131,4 +131,9 @@ If you find roles or skills that are less relevant to native desktop development
 
 ---
 
+## Donate
+like this SKILL? Support me (Bitcoin): **1HZ2h3yyYULFT4jEGwB5ESAZUhBj7kPUa2**
+
+---
+
 > *"Built for the desktop. Engineered for the native experience."*
