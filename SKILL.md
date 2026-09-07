@@ -1,4 +1,7 @@
 ---
+# IT Project — Skill Directory by Role (Desktop Native Edition)
+---
+
 > Source: Specific Tasks & Contributions in Development Team Meetings  
 > Version: 1.0 Code Name Royal Champion | Date: 2026-09-07  
 > Scope: Native Desktop Application (C# WPF, Qt, Swift, Win32, JavaFX)
