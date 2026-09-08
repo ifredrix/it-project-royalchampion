@@ -9,7 +9,7 @@ the user's request — saving tokens on every skill invocation.
 
 > **Scope:** native desktop applications on Windows, macOS, and Linux
 > (WPF, WinForms, WinUI 3, Swift/SwiftUI, Qt, GTK, JavaFX, Avalonia).
-> For web/SaaS projects, see the sister repository [`it-project-codename-grandwarden](https://github.com/ifredrix/it-project-grandwarden)`.
+> For web/SaaS projects, see the sister repository [`it-project-codename-grandwarden`](https://github.com/ifredrix/it-project-grandwarden).
 
 ## Repository Structure
 
