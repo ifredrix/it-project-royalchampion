@@ -1,139 +1,43 @@
-# IT Project — Codename: RoyalChampion
+# Royal Champion — Skill (Progressive Disclosure Edition, English)
 
-> **Skill Directory for Native Desktop Application Development**
+Restructured version of `it-project-codename-royalchampion` optimized for token
+efficiency on Claude (Code / Claude.ai): a very small parent SKILL.md + 6
+per-category reference files, so Claude only reads what is actually relevant.
 
----
-
-## About This Repository
-
-This repository contains a **Skill Directory** specifically designed for **Native Desktop** application development teams (not web or hybrid). This directory maps the roles, responsibilities, and skill sets required to build high-quality desktop applications running natively on Windows, macOS, and Linux.
-
-> **Difference from other repos:** This repository is the **Native Desktop** version of the skill directory. If you are looking for a skill directory for web/SaaS-based projects, please visit our sister repository: [`it-project-codename-grandwarden`](https://github.com/ifredrix/it-project-codename-grandwarden).
-
----
-
-## Project Scope
-
-This skill directory covers the entire **Software Development Life Cycle (SDLC)** for native desktop applications:
-
-| Phase | Related Roles |
-| --- | --- |
-| **Strategy & Business** | Product Manager, Product Owner |
-| **Design & Research** | UX Designer, UI Designer, UX Researcher |
-| **Development** | Software Architect, Lead Developer, Desktop Application Developer, System & Integration Developer |
-| **Testing & Security** | QA Engineer (Manual), QA Automation Engineer, Security Tester |
-| **Deployment & Infrastructure** | DevOps Engineer, System Administrator, Release Manager |
-| **Project Management** | Project Manager, Scrum Master |
-
----
-
-## File Structure
+## Structure
 
 ```javascript
-it-project-codename-royalchampion/
-├── SKILL.md          ← Complete Skill Directory (17 roles, 6 categories)
-├── README.md         ← This document
-└── (future assets)
-
+royalchampion-skill-en/
+├── SKILL.md                 # compact routing file (always loaded)
+└── reference/
+    ├── technical.md           # Software Architect, Lead, Dev, Integration
+    ├── project-management.md  # PM, Scrum Master
+    ├── design.md              # UX, UI, Researcher
+    ├── testing.md             # QA Manual, QA Automation, Security
+    ├── infrastructure.md      # DevOps, SysAdmin, Release Manager
+    └── strategy.md            # Product Manager, Product Owner
 ```
 
-### SKILL.md
+## How to Use on Windows
 
-The main file containing detailed descriptions for each role within the team, including:
+### Option 1 — Claude Code (recommended)
 
-* **6 Categories** of roles (Technical, PM, Design, Testing, Infrastructure, Strategy)
-* **17 Specific** roles
-* Skills & tasks tailored for the **native desktop** context (WPF, Qt, Swift, Win32, JavaFX)
-
----
-
-## Supported Technologies & Platforms
-
-This skill directory is designed for teams using native desktop technologies such as:
-
-| Platform | Framework / Technology |
-| --- | --- |
-| **Windows** | WPF, WinForms, WinUI 3, UWP |
-| **macOS** | Swift, SwiftUI, AppKit, Cocoa |
-| **Linux** | Qt, GTK, JavaFX |
-| **Cross-Platform** | Qt (C++), Avalonia UI, Uno Platform |
-
----
-
-## Team Workflow Based on Skill Directory
-
-```javascript
-Product Manager & Product Owner
-        ↓
-UX Designer → UI Designer → UX Researcher
-        ↓
-Software Architect + Lead Developer
-        ↓
-Desktop Application Developer + System & Integration Developer
-        ↓
-QA Manual + QA Automation + Security Tester
-        ↓
-DevOps + SysAdmin + Release Manager
-        ↓
-Release to Microsoft Store / Mac App Store / Linux Repositories
-
+```powershell
+# from your project folder
+mkdir .claude\skills\royalchampion
+xcopy /E /I "C:\path\to\royalchampion-skill-en" ".claude\skills\royalchampion"
 ```
 
-> **Project Manager** and **Scrum Master** oversee and coordinate the entire workflow above.
+Claude Code automatically loads `SKILL.md` and only opens `reference/*.md` when needed.
 
----
+### Option 2 — Claude.ai (web)
 
-## When to Use This Directory?
+1. Go to Settings -> Capabilities -> Skills (or upload via chat, depending on plan).
+2. Upload `SKILL.md` as the main skill.
+3. When Claude needs details on a role, paste only the single relevant reference file.
 
-Use this skill directory if your project meets the following criteria:
+## Token-Saving Principles
 
-* [x] The application runs **natively** on desktop (not in a browser)
-* [x] Requires access to **hardware** or **OS-level APIs** (file system, printer, serial port, etc.)
-* [x] Requires an **offline-first** architecture with background synchronization
-* [x] Needs to be distributed via **installers** (.msi, .dmg, .AppImage) or app stores
-* [x] Requires an **auto-updater** and **code signing**
-* [x] Requires **multi-OS** support (Windows, macOS, Linux)
-
----
-
-## When NOT to Use This Directory?
-
-Do not use this directory if your project is:
-
-* [ ] **Web-based** or **SaaS** applications → use [`grandwarden`](https://github.com/ifredrix/it-project-codename-grandwarden)
-* [ ] **Native mobile** applications (iOS/Android)
-* [ ] **Hybrid desktop** applications based on Electron / Tauri → can still be used with minor tweaks, but not optimal
-* [ ] **AI/ML**, **game**, **IoT**, or **blockchain** projects
-
----
-
-## How to Use
-
-1. **Read `SKILL.md**` to understand all available roles and skills.
-2. **Adjust according to your team size:**
-
-* **Small team (5–7 people):** Several roles can be combined (e.g., PM + Scrum Master, UX + UI, DevOps + SysAdmin).
-* **Large team (15–25 people):** Each role can be assigned to a dedicated person, or even multiple people per role.
-
-3. **Add specialist roles** if needed (e.g., C++ Specialist for Qt, Windows Driver Developer, etc.).
-4. **Use as a reference** for:
-
-* Writing job descriptions
-* Team performance evaluation
-* Identifying skill gaps within the team
-* Hiring planning
-
----
-
-## Contributing
-
-If you find roles or skills that are less relevant to native desktop development, or wish to add new technologies, feel free to open an **issue** or submit a **pull request**.
-
----
-
-## Donate
-like this SKILL? Support me (Bitcoin): **1HZ2h3yyYULFT4jEGwB5ESAZUhBj7kPUa2**
-
----
-
-> *"Built for the desktop. Engineered for the native experience."*
+- The frontmatter description is kept short but still contains trigger keywords.
+- SKILL.md contains a routing table so Claude knows exactly which file to open.
+- No duplicated content across files.
